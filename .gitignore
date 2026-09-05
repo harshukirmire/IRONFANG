@@ -1,0 +1,46 @@
+# =============================================
+# IRONFANG — .gitignore
+# =============================================
+
+# Environment files — NEVER commit secrets
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+*/.env
+*/.env.local
+*/.env.*.local
+*.env/**
+
+# Dependencies
+node_modules/
+node_modules/**
+*/node_modules/
+/.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+/build
+/dist
+
+# Testing
+/coverage
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
