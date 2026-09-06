@@ -859,8 +859,16 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+app.get('/', (req, res) => {
+  res.send('Pitbull Backend is running on Vercel!');
+});
+
+if (require.main === module) {
+  app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n🐕 PITBULL AI Server running on port ${PORT}`);
   console.log(`📡 Health: http://localhost:${PORT}/api/health`);
   console.log(`🎮 Scenarios: ${Object.keys(scenarios).length}\n`);
-});
+  });
+}
+
+module.exports = app;

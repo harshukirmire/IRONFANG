@@ -4,12 +4,14 @@
 
 # Environment files — NEVER commit secrets
 .env
+.env.vercel
 .env.local
 .env.*.local
 .env.development
 .env.test
 .env.production
 */.env
+*/.env.vercel
 */.env.local
 */.env.*.local
 *.env/**
